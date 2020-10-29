@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tiffany & Co. vs LVMH</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<style>
+  body{background-color: #0ABAB5;}
+  svg{background-color: white;}
+</style>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/Proj2/index.html">Home</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/Proj2/About_Me/About_Me.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Proj2/History/History.html">History of Tiffany & Co.</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Proj2/Tif_Store/Tif_Store.html">Tiffany Store Locations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Proj2/Bul_Store/Bul_Store.html">Bulgari Store Locations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Proj2/LVMH_Stock/LVMH_Stock.html">Stock Comparison - LVMH</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Proj2/Pandora_Stock/Pandora_Stock.html">Stock Comparison - Pandora</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="s/Proj2/Findings/Findings.html">Findings</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <!-- Page Header -->
+ <header class="masthead" style="background-image: url('img/charms.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Stock Comparison</h1>
+          <span class="subheading"></span>
+          <p class="lead mt-3">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div id="About" class="tabcontent">
+      <div style="background-color:white">
+      <h2 style="text-align:center">Tiffany & Co. Vs. Pandora</h2>
+    </div>
+      <script>
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      theme: "light2", // "light1", "light2", "dark1", "dark2"
+      exportEnabled: true,
+      title:{
+        text: "Tiffany's vs Pandora"
+      },
+      axisX: {
+        valueFormatString: "MMM"
+      },
+      axisY: {
+        prefix: "$",
+        title: "Price (in USD)"
+      },
+      toolTip: {
+        shared: true
+      },
+      legend: {
+        cursor: "pointer",
+        itemclick: toogleDataSeries
+      },
+      data: [{
+        type: "candlestick",
+        showInLegend: true,
+        name: "Tiffany's",
+        yValueFormatString: "$###0.00",
+        xValueFormatString: "MMMM YY",
+        dataPoints: [
+          { x: new Date(2020, 00, 01), y: [133.74, 133.87, 133.55, 131.85] },
+          { x: new Date(2020, 01, 01), y: [134.14, 134.28, 134.06, 134.20] },
+          { x: new Date(2020, 02, 01), y: [133.60, 133.83, 133.22, 133.67] },
+          { x: new Date(2020, 03, 01), y: [127.75, 129.75, 127.75, 129.34] },
+          { x: new Date(2020, 04, 01), y: [126.78, 127.35, 126.45, 127.06] },
+          { x: new Date(2020, 05, 01), y: [127.52, 128.77, 127.52, 128.50] },
+          { x: new Date(2020, 06, 01), y: [121.83, 123.30, 120.50, 122.23] },
+          { x: new Date(2020, 07, 01), y: [124.87, 125.78, 124.45, 125.47] },
+          { x: new Date(2020, 08, 01), y: [122.00, 123.51, 122.00, 123.49] }
+        ]
+      },
+      {
+        type: "candlestick",
+        showInLegend: true,
+        name: "Pandora",
+        yValueFormatString: "$###0.00",
+        dataPoints: [
+          { x: new Date(2020, 00, 01), y: [10.88, 11.01, 10.88, 10.97] },
+          { x: new Date(2020, 01, 01), y: [12.73, 12.99, 12.73, 12.89] },
+          { x: new Date(2020, 02, 01), y: [10.86, 11.09, 10.79, 11.09] },
+          { x: new Date(2020, 03, 01), y: [7.77, 7.77, 7.47, 7.54] },
+          { x: new Date(2020, 04, 01), y: [8.73, 8.83, 8.31, 8.63] },
+          { x: new Date(2020, 05, 01), y: [12.53, 12.62, 12.52, 12.60] },
+          { x: new Date(2020, 06, 01), y: [13.88, 13.98, 12.88, 12.98] },
+          { x: new Date(2020, 07, 01), y: [15.85, 15.85, 15.61, 15.73] },
+          { x: new Date(2020, 08, 01), y: [18.25, 18.45, 18.25, 18.43] }
+        ]
+      }]
+    });
+    chart.render();
+    
+    function toogleDataSeries(e) {
+      if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+        e.dataSeries.visible = false;
+      } else {
+        e.dataSeries.visible = true;
+      }
+      e.chart.render();
+    }
+    
+    }
+    </script>
+    </head>
+    <body>
+    <div id="chartContainer" style="height: 600px; width: 1110px;"></div>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </div>
+      
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+<!-- Color palette -->
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script type="text/javascript" src = "circpacking_HOM.js"></script>
+<script type="text/javascript" src = "Bar_HOM.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
